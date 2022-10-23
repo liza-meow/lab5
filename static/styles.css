@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+}
+* {
+    color: #CFCFCF;
+    font-family: Calibri;
+    font-weight: bold;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #ffffff;
+    scrollbar-highlight-color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+
+
+.svg-plot {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    stroke-linecap: round;
+    stroke-width: 0.5;
+
+
+}
+
+
+
+.svg-plot g:hover polygon {
+    fill-opacity: 1;
+}
+.svg-plot text {
+    font-size: 2px;
+    fill: black;
+}

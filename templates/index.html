@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фадеичев Даниил</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <svg class="svg-plot" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="{{ minX }} {{ minY }} {{ width }} {{ height }}">
+
+
+        {% for l in polygons %}
+        <g>
+            <polygon points="{{l[0]}},{{l[1]}} {{l[2]}},{{l[3]}} {{l[4]}},{{l[5]}}" stroke="black" fill="{{l[6]}}"></polygon>
+            <text x="{{(l[0] + l[2] + l[4]) / 3 - 2}}" y="{{(l[1] + l[3] + l[5]) / 3 + 1}}">{{l[7]}}</text>
+        </g>
+        {% endfor %}
+
+        {% for c in points %}
+            <circle cx="{{c[0]}}" cy="{{c[1]}}" r="0.7" fill="black"></circle>
+        {% endfor %}
+
+
+        <rect width="10" height="5" x="-60" y="25" fill={{ colors[9] }}></rect>
+        <rect width="10" height="5" x="-50" y="25" fill={{ colors[8] }}></rect>
+        <rect width="10" height="5" x="-40" y="25" fill={{ colors[7] }}></rect>
+        <rect width="10" height="5" x="-30" y="25" fill={{ colors[6] }}></rect>
+        <rect width="10" height="5" x="-20" y="25" fill={{ colors[5] }}></rect>
+        <rect width="10" height="5" x="-10" y="25" fill={{ colors[4] }}></rect>
+        <rect width="10" height="5" x="0"   y="25" fill={{ colors[3] }}></rect>
+        <rect width="10" height="5" x="10"  y="25" fill={{ colors[2] }}></rect>
+        <rect width="10" height="5" x="20"  y="25" fill={{ colors[1] }}></rect>
+        <rect width="10" height="5" x="30"  y="25" fill={{ colors[0] }}></rect>
+
+        <text width="60" height="5" x="39"  y="32">350</text>
+        <text width="60" height="5" x="29"  y="32">315</text>
+        <text width="60" height="5" x="19"  y="32">280</text>
+        <text width="60" height="5" x="9"   y="32">245</text>
+        <text width="60" height="5" x="-1"  y="32">210</text>
+        <text width="60" height="5" x="-11"  y="32">175</text>
+        <text width="60" height="5" x="-21"  y="32">140</text>
+        <text width="60" height="5" x="-31"  y="32">105</text>
+        <text width="60" height="5" x="-41"  y="32">70</text>
+        <text width="60" height="5" x="-51"  y="32">35</text>
+        <text width="60" height="5" x="-61"  y="32">0</text>
+  </svg>
+
+
+
+
+</body>
+</html>
